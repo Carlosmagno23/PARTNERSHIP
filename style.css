@@ -1,0 +1,330 @@
+:root{
+    --cor-fundo: #3C3A3D;
+    --cor-primaria: #BCB8B1;
+    --cor-seundaria: #8377D1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    height: 250px;
+}
+
+#cabecalho {
+    width: 100%;
+    height: 200px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    background-color: var(--cor-fundo);
+    color: #FFF;
+    padding-top: 20px;
+    padding: 0 20px;
+}
+
+menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+#menu ul {
+    list-style-type: none;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+#menu ul li {
+    margin-left: 20px;
+
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+#botao-login {
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background-color: var(--cor-primaria);
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 40px;
+    width: 180px;
+    padding: 0 15px; 
+    position: relative;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+#botao-login ul {
+    margin-left: 0;
+    padding-left: 20px;
+}
+
+
+#botao-login ul li {
+    display: inline;
+    position: relative;
+}
+
+#botao-login ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    left: 0;
+    width: 100%;
+}
+
+/*sub menu login*/
+
+#botao-login ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: #BCB8B1;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    z-index: 10;
+}
+
+#botao-login ul li:hover ul {
+    display: block;
+}
+
+#botao-login ul ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#botao-login ul ul li a:hover {
+    background-color: #8377D1;
+    color: white;
+}
+
+#div1 {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas de tamanhos iguais */
+    gap: 5px;
+    justify-items: center; /* Centraliza as imagens horizontalmente */
+    align-items: center; /* Centraliza as imagens verticalmente */
+    width: 50%; /* Garante que o contêiner ocupe toda a largura */
+    height: 100%;
+    padding: 30px;
+}
+
+#imgs img {
+    border-radius: 5px; /* Exemplo: bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    width: 400px; /* Faz a imagem ocupar 100% da largura da célula */
+    height: auto; /* Mantém a proporção */
+    object-fit: cover;
+
+}
+
+
+#infos {
+    align-items: center;
+    text-align: center;
+    margin: 30px;
+    font-family: montserrat;
+}
+
+button {
+    border-radius: 5px;
+    border: 3px;
+    width: 200px;
+    height: 40px;
+    font-family: montserrat;
+}
+
+#cards {
+    height: 200px;
+    border: #3C3A3D;
+}
+
+/*Slides*/
+
+.slider{
+    margin: 0 auto;
+    width: 100vw;
+    height: 600px;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 18%;
+    position: relative;
+}
+
+.slides{
+    width: 400%;
+    height: 100%;
+    display: flex;
+    object-fit: contain;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    position:relative;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.slide-text {
+    position: absolute; /* Posiciona o texto sobre a imagem */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+    color: white; /* Cor do texto */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    padding: 100px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    max-width: 80%; /* Evita que o texto ocupe toda a largura */
+}
+
+.slide-text h2 {
+    font-size: 48px;
+    margin: 0 0 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.slide-text p {
+    font-size: 36px;
+    margin: 0;
+    font-family: 'Montserrat', Regular 400 Italic;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: 550px;
+    margin-left: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #FFF;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 550px;
+    margin-left: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~.navigation-auto .auto-btn1{
+    background-color: #FFF;
+}
+
+#radio2:checked ~.navigation-auto .auto-btn2{
+    background-color: #FFF;
+}
+
+#radio3:checked ~.navigation-auto .auto-btn3{
+    background-color: #FFF;
+}
+
+#radio4:checked ~.navigation-auto .auto-btn4{
+    background-color: #FFF;
+}
+
+#titulo-slide {
+    font-size: 100px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#fim {
+    height: 300px;
+    width: 100%;
+}
